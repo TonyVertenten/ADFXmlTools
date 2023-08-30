@@ -1,2 +1,1 @@
-C:\Users\tony.vertenten\PycharmProjects\pythonProject\ADFXmlTools\FmsModule\FmsModuleModel\src\be\intris\tris\fms\module\model\views
-C:\Users\tony.vertenten\PycharmProjects\pythonProject\ADFXmlTools\FmsModule\FmsModuleModel\src\be\intris\tris\fms\module\model\service
+C:\Users\tony.vertenten\PycharmProjects\pythonProject\ADFXmlTools\TstModuleModel
