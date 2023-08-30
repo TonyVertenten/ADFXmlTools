@@ -1,0 +1,2571 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd"> 
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="FmsdomGoodsView"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  SelectListFlags="1"
+  FromListFlags="1"
+  WhereFlags="1"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  SelectAllAttributes="false"
+  RowClass="be.intris.tris.fms.module.model.views.FmsdomGoodsViewRowImpl"
+  ComponentClass="be.intris.tris.fms.module.model.views.FmsdomGoodsViewImpl"
+  DefClass="be.intris.tris.common.model.frameworkext.TrisViewDefImpl"
+  PageIterMode="Full"
+  RangeSize="-1"
+  ComponentInterface="be.intris.tris.fms.module.model.views.common.FmsdomGoodsView"
+  RowInterface="be.intris.tris.fms.module.model.views.common.FmsdomGoodsViewRow"
+  FetchMode="FETCH_AS_NEEDED">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|Coll|VarAccess"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="be.intris.tris.fms.module.model.views.FmsdomGoodsView_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <Variable
+    Name="pPiId_bvar"
+    Kind="viewcriteria"
+    Type="oracle.jbo.domain.Number"/>
+  <Variable
+    Name="pId_bvar"
+    Kind="viewcriteria"
+    Type="oracle.jbo.domain.Number"/>
+  <Variable
+    Name="pCollectionPiId_bvar"
+    Kind="viewcriteria"
+    Type="oracle.jbo.domain.Number"/>
+  <Variable
+    Name="pLanguageCode_bvar"
+    Kind="where"
+    Type="java.lang.String">
+    <TransientExpression
+      Name="expression"
+      CodeSourceName="FmsdomGoodsView"/>
+  </Variable>
+  <Variable
+    Name="pCorporationCode_bvar"
+    Kind="where"
+    Type="java.lang.String">
+    <TransientExpression
+      Name="expression"
+      CodeSourceName="FmsdomGoodsView"/>
+  </Variable>
+  <ViewAccessor
+    Name="GenCommonServiceSharedLOV_GenUnitQualifiersLOVForWeightSharedInstance1"
+    ViewObjectName="be.intris.tris.gen.common.model.views.GenUnitQualifiersLOVForWeight"
+    AMUsageName="GenCommonServiceSharedLOV"
+    ViewInstanceName="GenUnitQualifiersLOVForWeightSharedInstance"
+    RowLevelBinds="true">
+    <ParameterMap>
+      <PIMap Variable="pLanguageCode_bvar">
+        <TransientExpression
+          Name="BindVariable"
+          CodeSourceName="FmsdomGoodsView"/>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
+  <ViewAccessor
+    Name="GenCommonServiceSharedLOV_GenCommodityCodesLOVSharedInstance1"
+    ViewObjectName="be.intris.tris.gen.common.model.views.GenCommodityCodesLOV"
+    AMUsageName="GenCommonServiceSharedLOV"
+    ViewInstanceName="GenCommodityCodesLOVSharedInstance"
+    RowLevelBinds="true">
+    <ParameterMap>
+      <PIMap Variable="pLanguageCode_bvar">
+        <TransientExpression
+          Name="BindVariable" CodeSourceName="FmsdomGoodsView"/>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
+  <ViewAccessor
+    Name="GenCommonServiceSharedLOV_GenCountriesLOVSharedInstance1"
+    ViewObjectName="be.intris.tris.gen.common.model.views.GenCountriesLOV"
+    AMUsageName="GenCommonServiceSharedLOV"
+    ViewInstanceName="GenCountriesLOVSharedInstance"
+    RowLevelBinds="true">
+    <ParameterMap>
+      <PIMap Variable="pLanguageCode_bvar">
+        <TransientExpression
+          Name="BindVariable" CodeSourceName="FmsdomGoodsView"/>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
+  <ViewAccessor
+    Name="GenCommonServiceSharedLOV_GenCurrenciesLOVSharedInstance1"
+    ViewObjectName="be.intris.tris.gen.common.model.views.GenCurrenciesLOV"
+    AMUsageName="GenCommonServiceSharedLOV"
+    ViewInstanceName="GenCurrenciesLOVSharedInstance"
+    RowLevelBinds="true">
+    <ParameterMap>
+      <PIMap Variable="pLanguageCode_bvar">
+        <TransientExpression
+          Name="BindVariable" CodeSourceName="FmsdomGoodsView"/>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
+  <ViewAccessor
+    Name="GenCommonServiceSharedLOV_GenGoodCustomStatesLOVSharedInstance1"
+    ViewObjectName="be.intris.tris.gen.common.model.views.GenGoodCustomStatesLOV"
+    AMUsageName="GenCommonServiceSharedLOV"
+    ViewInstanceName="GenGoodCustomStatesLOVSharedInstance"
+    RowLevelBinds="true">
+    <ParameterMap>
+      <PIMap Variable="pLanguageCode_bvar">
+        <TransientExpression
+          Name="BindVariable" CodeSourceName="FmsdomGoodsView"/>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
+  <ViewAccessor
+    Name="GenCommonServiceSharedLOV_GenHsCodesLOVSharedInstance1"
+    ViewObjectName="be.intris.tris.gen.common.model.views.GenHsCodesLOV"
+    AMUsageName="GenCommonServiceSharedLOV"
+    ViewInstanceName="GenHsCodesLOVSharedInstance"
+    RowLevelBinds="true"
+    MaxFetchSize="1"
+    RangeSize="10">
+    <ParameterMap>
+      <PIMap Variable="pLanguageCode_bvar">
+        <TransientExpression
+          Name="BindVariable" CodeSourceName="FmsdomGoodsView"/>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
+  <ViewAccessor
+    Name="GenCommonServiceSharedLOV_GenPackageCodesLOVSharedInstance1"
+    ViewObjectName="be.intris.tris.gen.common.model.views.GenPackageCodesLOV"
+    AMUsageName="GenCommonServiceSharedLOV"
+    ViewInstanceName="GenPackageCodesLOVSharedInstance"
+    RowLevelBinds="true">
+    <ParameterMap>
+      <PIMap Variable="pLanguageCode_bvar">
+        <TransientExpression
+          Name="BindVariable" CodeSourceName="FmsdomGoodsView"/>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
+  <ViewAccessor
+    Name="GenCommonServiceSharedLOV_GenReferenceQualifiersForFmsGoodsLOVSharedInstance1"
+    ViewObjectName="be.intris.tris.gen.common.model.views.GenReferenceQualifiersForFmsGoodsLOV"
+    AMUsageName="GenCommonServiceSharedLOV"
+    ViewInstanceName="GenReferenceQualifiersForFmsGoodsLOVSharedInstance"
+    RowLevelBinds="true">
+    <ParameterMap>
+      <PIMap Variable="pLanguageCode_bvar">
+        <TransientExpression
+          Name="BindVariable" CodeSourceName="FmsdomGoodsView"/>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
+  <ViewAccessor
+    Name="GenCommonServiceSharedLOV_GenUnitQualifiersLOVForLengthSharedInstance1"
+    ViewObjectName="be.intris.tris.gen.common.model.views.GenUnitQualifiersLOVForLength"
+    AMUsageName="GenCommonServiceSharedLOV"
+    ViewInstanceName="GenUnitQualifiersLOVForLengthSharedInstance"
+    RowLevelBinds="true">
+    <ParameterMap>
+      <PIMap Variable="pLanguageCode_bvar">
+        <TransientExpression
+          Name="BindVariable" CodeSourceName="FmsdomGoodsView"/>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
+  <ViewAccessor
+    Name="GenCommonServiceSharedLOV_GenUnitQualifiersLOVForVolumeSharedInstance1"
+    ViewObjectName="be.intris.tris.gen.common.model.views.GenUnitQualifiersLOVForVolume"
+    AMUsageName="GenCommonServiceSharedLOV"
+    ViewInstanceName="GenUnitQualifiersLOVForVolumeSharedInstance"
+    RowLevelBinds="true">
+    <ParameterMap>
+      <PIMap Variable="pLanguageCode_bvar">
+        <TransientExpression
+          Name="BindVariable" CodeSourceName="FmsdomGoodsView"/>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
+  <ViewAccessor
+    Name="GenCommonServiceSharedLOV_GenWarrantBrandsLOVSharedInstance1"
+    ViewObjectName="be.intris.tris.gen.common.model.views.GenWarrantBrandsLOV"
+    AMUsageName="GenCommonServiceSharedLOV"
+    ViewInstanceName="GenWarrantBrandsLOVSharedInstance"
+    RowLevelBinds="true">
+    <ParameterMap>
+      <PIMap Variable="pLanguageCode_bvar">
+        <TransientExpression
+          Name="BindVariable"
+          CodeSourceName="FmsdomGoodsView"/>
+      </PIMap>
+      <PIMap Variable="pCorporationCode_bvar">
+        <TransientExpression
+          Name="BindVariable"
+          CodeSourceName="FmsdomGoodsView"/>
+      </PIMap>
+      <PIMap Variable="pCommodityCode_bvar">
+        <TransientExpression
+          Name="BindVariable"
+          CodeSourceName="FmsdomGoodsView"/>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
+  <ViewAccessor
+    Name="GenCommonServiceSharedLOV_GenWarrantDelUnitsLOVSharedInstance1"
+    ViewObjectName="be.intris.tris.gen.common.model.views.GenWarrantDelUnitsLOV"
+    AMUsageName="GenCommonServiceSharedLOV"
+    ViewInstanceName="GenWarrantDelUnitsLOVSharedInstance"
+    RowLevelBinds="true">
+    <ParameterMap>
+      <PIMap Variable="pLanguageCode_bvar">
+        <TransientExpression
+          Name="BindVariable" CodeSourceName="FmsdomGoodsView"/>
+      </PIMap>
+      <PIMap Variable="pCorporationCode_bvar">
+        <TransientExpression
+          Name="BindVariable" CodeSourceName="FmsdomGoodsView"/>
+      </PIMap>
+      <PIMap Variable="pWarrantStorCond_bvar">
+        <TransientExpression
+          Name="ExpressionScript"
+          CodeSourceName="FmsdomGoodsView"/>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
+  <ViewAccessor
+    Name="GenCommonServiceSharedLOV_GenWarrantGradesLOVSharedInstance1"
+    ViewObjectName="be.intris.tris.gen.common.model.views.GenWarrantGradesLOV"
+    AMUsageName="GenCommonServiceSharedLOV"
+    ViewInstanceName="GenWarrantGradesLOVSharedInstance"
+    RowLevelBinds="true">
+    <ParameterMap>
+      <PIMap Variable="pLanguageCode_bvar">
+        <TransientExpression
+          Name="BindVariable" CodeSourceName="FmsdomGoodsView"/>
+      </PIMap>
+      <PIMap Variable="pCorporationCode_bvar">
+        <TransientExpression
+          Name="BindVariable" CodeSourceName="FmsdomGoodsView"/>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
+  <ViewAccessor
+    Name="GenCommonServiceSharedLOV_GenWarrantScreensLOVSharedInstance1"
+    ViewObjectName="be.intris.tris.gen.common.model.views.GenWarrantScreensLOV"
+    AMUsageName="GenCommonServiceSharedLOV"
+    ViewInstanceName="GenWarrantScreensLOVSharedInstance"
+    RowLevelBinds="true">
+    <ParameterMap>
+      <PIMap Variable="pLanguageCode_bvar">
+        <TransientExpression
+          Name="BindVariable" CodeSourceName="FmsdomGoodsView"/>
+      </PIMap>
+      <PIMap Variable="pCorporationCode_bvar">
+        <TransientExpression
+          Name="BindVariable" CodeSourceName="FmsdomGoodsView"/>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
+  <ViewAccessor
+    Name="GenCommonServiceSharedLOV_GenWarrantStorCondsLOVSharedInstance1"
+    ViewObjectName="be.intris.tris.gen.common.model.views.GenWarrantStorCondsLOV"
+    AMUsageName="GenCommonServiceSharedLOV"
+    ViewInstanceName="GenWarrantStorCondsLOVSharedInstance"
+    RowLevelBinds="true">
+    <ParameterMap>
+      <PIMap Variable="pCorporationCode_bvar">
+        <TransientExpression
+          Name="BindVariable" CodeSourceName="FmsdomGoodsView"/>
+      </PIMap>
+      <PIMap Variable="pLanguageCode_bvar">
+        <TransientExpression
+          Name="BindVariable" CodeSourceName="FmsdomGoodsView"/>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
+  <ViewAccessor
+    Name="GenWarrantBrandsLOV1"
+    ViewObjectName="be.intris.tris.gen.common.model.views.GenWarrantBrandsLOV"
+    RowLevelBinds="true">
+    <ViewCriteriaUsage
+      Name="FilterCommodityCode"
+      FullName="be.intris.tris.gen.common.model.views.GenWarrantBrandsLOV.FilterCommodityCode"/>
+    <ParameterMap>
+      <PIMap Variable="pCommodityCode_bvar">
+        <TransientExpression
+          Name="BindVariable"
+          CodeSourceName="FmsdomGoodsView"/>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
+  <ViewAccessor
+    Name="WmsProjectsLOV1"
+    ViewObjectName="be.intris.tris.wms.common.model.views.WmsProjectsLOV"
+    RowLevelBinds="false">
+    <ViewCriteriaUsage
+      Name="WmsProjectsLOVCriteria"
+      FullName="be.intris.tris.wms.common.model.views.WmsProjectsLOV.WmsProjectsLOVCriteria"/>
+    <ParameterMap>
+      <PIMap Variable="pThirdpartyId_bvar">
+        <TransientExpression
+          Name="BindVariable"
+          CodeSourceName="FmsdomGoodsView"/>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
+  <ViewAccessor
+    Name="FmsStockStatusLOV1"
+    ViewObjectName="be.intris.tris.fms.common.model.views.FmsStockStatusLOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="GenPackageCodesLOV1"
+    ViewObjectName="be.intris.tris.gen.common.model.views.GenPackageCodesLOV"
+    RowLevelBinds="false"/>
+  <ViewAccessor
+    Name="GenWarrantScreensLOV1"
+    ViewObjectName="be.intris.tris.gen.common.model.views.GenWarrantScreensLOV"
+    RowLevelBinds="true">
+    <ViewCriteriaUsage
+      Name="GenWarrantScreensByCommodity"
+      FullName="be.intris.tris.gen.common.model.views.GenWarrantScreensLOV.GenWarrantScreensByCommodity"/>
+    <ParameterMap>
+      <PIMap Variable="pCommodityCode_bvar">
+        <TransientExpression
+          Name="ExpressionScript"
+          CodeSourceName="FmsdomGoodsView"/>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
+  <ViewAccessor
+    Name="GenWarrantGradesLOV1"
+    ViewObjectName="be.intris.tris.gen.common.model.views.GenWarrantGradesLOV"
+    RowLevelBinds="true">
+    <ViewCriteriaUsage
+      Name="GenWarrantGradesByCommodity"
+      FullName="be.intris.tris.gen.common.model.views.GenWarrantGradesLOV.GenWarrantGradesByCommodity"/>
+    <ParameterMap>
+      <PIMap Variable="pCommodityCode_bvar">
+        <TransientExpression
+          Name="ExpressionScript"
+          CodeSourceName="FmsdomGoodsView"/>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
+  <ViewAccessor
+    Name="GenWarrantDelUnitsLOV1"
+    ViewObjectName="be.intris.tris.gen.common.model.views.GenWarrantDelUnitsLOV"
+    RowLevelBinds="true">
+    <ViewCriteriaUsage
+      Name="GenWarrantDelUnitsLOVForStorageConditionCriteria"
+      FullName="be.intris.tris.gen.common.model.views.GenWarrantDelUnitsLOV.GenWarrantDelUnitsLOVForStorageConditionCriteria"/>
+    <ParameterMap>
+      <PIMap Variable="pWarrantStorCond_bvar">
+        <TransientExpression
+          Name="ExpressionScript"
+          CodeSourceName="FmsdomGoodsView"/>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
+  <ListBinding
+    Name="LOV_NetWeightUnit"
+    ListVOName="GenCommonServiceSharedLOV_GenUnitQualifiersLOVForWeightSharedInstance1"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="LOV_NetWeightUnit_LOVUIHints_NullValueId"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="NetWeightUnit"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Code"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="NameTranslated"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_VolumeUnit"
+    ListVOName="GenCommonServiceSharedLOV_GenUnitQualifiersLOVForVolumeSharedInstance1"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="LOV_VolumeUnit_LOVUIHints_NullValueId"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="VolumeUnit"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Code"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="NameTranslated"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_ReferenceQualifier"
+    ListVOName="GenCommonServiceSharedLOV_GenReferenceQualifiersForFmsGoodsLOVSharedInstance1"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="LOV_ReferenceQualifier_LOVUIHints_NullValueId"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="ReferenceQualifier"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Code"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="NameTranslated"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_PackageCodeDisplay"
+    ListVOName="GenCommonServiceSharedLOV_GenPackageCodesLOVSharedInstance1"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="LOV_PackageCodeDisplay_LOVUIHints_NullValueId"
+    MRUCount="0"
+    ComboRowCountHint="10">
+    <AttrArray Name="AttrNames">
+      <Item Value="PackageCodeDisplay"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="DerivedAttrNames">
+      <Item Value="PackageCode"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="NameTranslated"/>
+      <Item Value="Code"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Code"/>
+      <Item Value="NameTranslated"/>
+    </AttrArray>
+    <DisplayCriteria
+      Name="LookupSearch"/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_HeightUnit"
+    ListVOName="GenCommonServiceSharedLOV_GenUnitQualifiersLOVForLengthSharedInstance1"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="LOV_HeightUnit_LOVUIHints_NullValueId"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="HeightUnit"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Code"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="NameTranslated"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_WidthUnit"
+    ListVOName="GenCommonServiceSharedLOV_GenUnitQualifiersLOVForLengthSharedInstance1"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="LOV_WidthUnit_LOVUIHints_NullValueId"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="WidthUnit"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Code"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="NameTranslated"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_LengthUnit"
+    ListVOName="GenCommonServiceSharedLOV_GenUnitQualifiersLOVForLengthSharedInstance1"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="LOV_LengthUnit_LOVUIHints_NullValueId"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="LengthUnit"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Code"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="NameTranslated"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_VolumeWeightUnit"
+    ListVOName="GenCommonServiceSharedLOV_GenUnitQualifiersLOVForWeightSharedInstance1"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="LOV_VolumeWeightUnit_LOVUIHints_NullValueId"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="VolumeWeightUnit"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Code"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="NameTranslated"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_LoadmeterUnit"
+    ListVOName="GenCommonServiceSharedLOV_GenUnitQualifiersLOVForLengthSharedInstance1"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="LOV_LoadmeterUnit_LOVUIHints_NullValueId"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="LoadmeterUnit"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Code"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="NameTranslated"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Screen"
+    ListVOName="GenWarrantScreensLOV1"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="LOV_Screen_LOVUIHints_NullValueId"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Screen"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Code"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="NameTranslated"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_StorageCondition"
+    ListVOName="GenCommonServiceSharedLOV_GenWarrantStorCondsLOVSharedInstance1"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="StorageCondition"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Code"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="NameTranslated"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_DeliveryUnit"
+    ListVOName="GenWarrantDelUnitsLOV1"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="LOV_DeliveryUnit_LOVUIHints_NullValueId"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="DeliveryUnit"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Code"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="NameTranslated"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Grade"
+    ListVOName="GenWarrantGradesLOV1"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="LOV_Grade_LOVUIHints_NullValueId"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Grade"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Code"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="NameTranslated"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Reference2Qualifier"
+    ListVOName="GenCommonServiceSharedLOV_GenReferenceQualifiersForFmsGoodsLOVSharedInstance1"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Reference2Qualifier"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Code"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="NameTranslated"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_CustomsStatus"
+    ListVOName="GenCommonServiceSharedLOV_GenGoodCustomStatesLOVSharedInstance1"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="CustomsStatus"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Code"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="NameTranslated"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_StatisticalValueCurrency"
+    ListVOName="GenCommonServiceSharedLOV_GenCurrenciesLOVSharedInstance1"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="StatisticalValueCurrency"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Code"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="NameTranslated"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_GrossWeightUnit"
+    ListVOName="GenCommonServiceSharedLOV_GenUnitQualifiersLOVForWeightSharedInstance1"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="GrossWeightUnit"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Code"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="NameTranslated"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Brand"
+    ListVOName="GenWarrantBrandsLOV1"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Brand"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Code"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Code"/>
+      <Item Value="TranslatedShortName"/>
+      <Item Value="CommodityDisplay"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_CommodityCodeDisplay"
+    ListVOName="GenCommonServiceSharedLOV_GenCommodityCodesLOVSharedInstance1"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="CommodityCodeDisplay"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="DerivedAttrNames">
+      <Item Value="CommodityCode"/>
+      <Item Value="CommodityCodeReal"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="NameTranslated"/>
+      <Item Value="Code"/>
+      <Item Value="Code"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Code"/>
+      <Item Value="NameTranslated"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_ProjectId"
+    ListVOName="WmsProjectsLOV1"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="ProjectId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_StockStatus"
+    ListVOName="FmsStockStatusLOV1"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="StockStatus"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Code"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_CommodityCode"
+    ListVOName="GenCommonServiceSharedLOV_GenCommodityCodesLOVSharedInstance1"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="CommodityCode"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="DerivedAttrNames">
+      <Item Value="CommodityCodeDisplay"/>
+      <Item Value="CommodityCodeReal"/>
+      <Item Value="CommodityCodeNameTranslated"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Code"/>
+      <Item Value="NameTranslated"/>
+      <Item Value="Code"/>
+      <Item Value="NameTranslated"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="NameTranslated"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_LoadWeightUnit"
+    ListVOName="GenCommonServiceSharedLOV_GenUnitQualifiersLOVForWeightSharedInstance1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="LoadWeightUnit"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Code"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="NameTranslated"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_AverageTareWeightUnit"
+    ListVOName="GenCommonServiceSharedLOV_GenUnitQualifiersLOVForWeightSharedInstance1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="AverageTareWeightUnit"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Code"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="NameTranslated"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_CommGrossWeightUnit"
+    ListVOName="GenCommonServiceSharedLOV_GenUnitQualifiersLOVForWeightSharedInstance1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="CommGrossWeightUnit"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Code"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="NameTranslated"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_CommNetWeightUnit"
+    ListVOName="GenCommonServiceSharedLOV_GenUnitQualifiersLOVForWeightSharedInstance1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="CommNetWeightUnit"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Code"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="NameTranslated"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_CommTareWeightUnit"
+    ListVOName="GenCommonServiceSharedLOV_GenUnitQualifiersLOVForWeightSharedInstance1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="CommTareWeightUnit"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Code"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="NameTranslated"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <EntityUsage
+    Name="FmsdomGoods"
+    Entity="be.intris.tris.fms.common.model.entities.FmsdomGoods"/>
+  <ViewAttribute
+    Name="Commodity"
+    PrecisionRule="true"
+    EntityAttrName="Commodity"
+    EntityUsage="FmsdomGoods"
+    AliasName="COMMODITY"/>
+  <ViewAttribute
+    Name="CreationTime"
+    PrecisionRule="true"
+    EntityAttrName="CreationTime"
+    EntityUsage="FmsdomGoods"
+    AliasName="CREATION_TIME"/>
+  <ViewAttribute
+    Name="CreationUser"
+    PrecisionRule="true"
+    EntityAttrName="CreationUser"
+    EntityUsage="FmsdomGoods"
+    AliasName="CREATION_USER"/>
+  <ViewAttribute
+    Name="Entity1"
+    PrecisionRule="true"
+    EntityAttrName="Entity1"
+    EntityUsage="FmsdomGoods"
+    AliasName="ENTITY"/>
+  <ViewAttribute
+    Name="GrossWeight"
+    PrecisionRule="true"
+    EntityAttrName="GrossWeight"
+    EntityUsage="FmsdomGoods"
+    AliasName="GROSS_WEIGHT"/>
+  <ViewAttribute
+    Name="GrossWeightUnit"
+    PrecisionRule="true"
+    EntityAttrName="GrossWeightUnit"
+    EntityUsage="FmsdomGoods"
+    AliasName="GROSS_WEIGHT_UNIT"
+    LOVName="LOV_GrossWeightUnit">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="HsCode"
+    PrecisionRule="true"
+    EntityAttrName="HsCode"
+    EntityUsage="FmsdomGoods"
+    AliasName="HS_CODE"/>
+  <ViewAttribute
+    Name="Id"
+    PrecisionRule="true"
+    EntityAttrName="Id"
+    EntityUsage="FmsdomGoods"
+    AliasName="ID"/>
+  <ViewAttribute
+    Name="ModificationTime"
+    PrecisionRule="true"
+    EntityAttrName="ModificationTime"
+    EntityUsage="FmsdomGoods"
+    AliasName="MODIFICATION_TIME"/>
+  <ViewAttribute
+    Name="ModificationUser"
+    PrecisionRule="true"
+    EntityAttrName="ModificationUser"
+    EntityUsage="FmsdomGoods"
+    AliasName="MODIFICATION_USER"/>
+  <ViewAttribute
+    Name="NetWeight"
+    PrecisionRule="true"
+    EntityAttrName="NetWeight"
+    EntityUsage="FmsdomGoods"
+    AliasName="NET_WEIGHT"/>
+  <ViewAttribute
+    Name="NetWeightUnit"
+    PrecisionRule="true"
+    EntityAttrName="NetWeightUnit"
+    EntityUsage="FmsdomGoods"
+    AliasName="NET_WEIGHT_UNIT"
+    LOVName="LOV_NetWeightUnit">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="NumberOfPackages"
+    PrecisionRule="true"
+    EntityAttrName="NumberOfPackages"
+    EntityUsage="FmsdomGoods"
+    AliasName="NUMBER_OF_PACKAGES"/>
+  <ViewAttribute
+    Name="PackageCode"
+    PrecisionRule="true"
+    EntityAttrName="PackageCode"
+    EntityUsage="FmsdomGoods"
+    AliasName="PACKAGE_CODE"/>
+  <ViewAttribute
+    Name="PiId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="PiId"
+    EntityUsage="FmsdomGoods"
+    AliasName="PI_ID"/>
+  <ViewAttribute
+    Name="Reference"
+    PrecisionRule="true"
+    EntityAttrName="Reference"
+    EntityUsage="FmsdomGoods"
+    AliasName="REFERENCE"/>
+  <ViewAttribute
+    Name="ReferenceQualifier"
+    PrecisionRule="true"
+    EntityAttrName="ReferenceQualifier"
+    EntityUsage="FmsdomGoods"
+    AliasName="REFERENCE_QUALIFIER"
+    LOVName="LOV_ReferenceQualifier">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Volume"
+    PrecisionRule="true"
+    EntityAttrName="Volume"
+    EntityUsage="FmsdomGoods"
+    AliasName="VOLUME"/>
+  <ViewAttribute
+    Name="VolumeUnit"
+    PrecisionRule="true"
+    EntityAttrName="VolumeUnit"
+    EntityUsage="FmsdomGoods"
+    AliasName="VOLUME_UNIT"
+    LOVName="LOV_VolumeUnit">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="PackageCodeDisplay"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="255"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="PackageCodeDisplay"
+    SQLType="VARCHAR"
+    LOVName="LOV_PackageCodeDisplay">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="be.intris.tris.fms.module.model.views.FmsdomGoodsView.PackageCodeDisplay_LABEL"/>
+        <CONTROLTYPE
+          Value="combo_lov"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="DisplayValueLink"
+    IsUpdateable="false"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="255"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="DisplayValueLink"
+    SQLType="VARCHAR"/>
+  <ViewAttribute
+    Name="Selected"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    AliasName="SELECTED"
+    DefaultValue="false"
+    Passivate="true"
+    EntityAttrName="Selected"
+    EntityUsage="FmsdomGoods">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="be.intris.tris.fms.module.model.views.FmsdomGoodsView.Selected_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="RowLevel"
+    IsUpdateable="false"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="255"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="RowLevel"
+    SQLType="VARCHAR"/>
+  <ViewAttribute
+    Name="DisplayValueLinkExtended"
+    IsUpdateable="false"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="255"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="DisplayValueLinkExtended"
+    SQLType="VARCHAR"/>
+  <ViewAttribute
+    Name="NumChildRows"
+    IsUpdateable="false"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.lang.Integer"
+    ColumnType="INTEGER"
+    AliasName="NumChildRows"
+    SQLType="INTEGER"/>
+  <ViewAttribute
+    Name="ParentId"
+    IsUpdateable="false"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    AliasName="ParentId"
+    SQLType="NUMERIC"/>
+  <ViewAttribute
+    Name="SelectedEmpty"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.lang.Boolean"
+    ColumnType="NUMBER"
+    AliasName="SelectedEmpty"
+    SQLType="BIT"/>
+      <ViewAttribute
+    Name="MarksAndNumbers"
+    PrecisionRule="true"
+    EntityAttrName="MarksAndNumbers"
+    EntityUsage="FmsdomGoods"
+    AliasName="MARKS_AND_NUMBERS"/>
+  <ViewAttribute
+    Name="CargoDescription"
+    PrecisionRule="true"
+    EntityAttrName="CargoDescription"
+    EntityUsage="FmsdomGoods"
+    AliasName="CARGO_DESCRIPTION"/>
+  <ViewAttribute
+    Name="Height"
+    PrecisionRule="true"
+    EntityAttrName="Height"
+    EntityUsage="FmsdomGoods"
+    AliasName="HEIGHT"/>
+  <ViewAttribute
+    Name="HeightUnit"
+    PrecisionRule="true"
+    EntityAttrName="HeightUnit"
+    EntityUsage="FmsdomGoods"
+    AliasName="HEIGHT_UNIT"
+    LOVName="LOV_HeightUnit">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Width"
+    PrecisionRule="true"
+    EntityAttrName="Width"
+    EntityUsage="FmsdomGoods"
+    AliasName="WIDTH"/>
+  <ViewAttribute
+    Name="WidthUnit"
+    PrecisionRule="true"
+    EntityAttrName="WidthUnit"
+    EntityUsage="FmsdomGoods"
+    AliasName="WIDTH_UNIT"
+    LOVName="LOV_WidthUnit">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Length"
+    PrecisionRule="true"
+    EntityAttrName="Length"
+    EntityUsage="FmsdomGoods"
+    AliasName="LENGTH"/>
+  <ViewAttribute
+    Name="LengthUnit"
+    PrecisionRule="true"
+    EntityAttrName="LengthUnit"
+    EntityUsage="FmsdomGoods"
+    AliasName="LENGTH_UNIT"
+    LOVName="LOV_LengthUnit">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="New"
+    IsUpdateable="false"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.lang.Boolean"
+    ColumnType="NUMBER"
+    AliasName="NEW1"
+    SQLType="BIT"/>
+  <ViewAttribute
+    Name="SourceId"
+    PrecisionRule="true"
+    EntityAttrName="SourceId"
+    EntityUsage="FmsdomGoods"
+    AliasName="SOURCE_ID"/>
+  <ViewAttribute
+    Name="PackageName"
+    PrecisionRule="true"
+    EntityAttrName="PackageName"
+    EntityUsage="FmsdomGoods"
+    AliasName="PACKAGE_NAME"/>
+  <ViewAttribute
+    Name="PackageNameOrCode"
+    IsUpdateable="false"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="255"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="PackageNameOrCode"
+    SQLType="VARCHAR"/>
+  <ViewAttribute
+    Name="DisableAmounts"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.lang.Boolean"
+    ColumnType="NUMBER"
+    AliasName="DisableAmounts"
+    SQLType="BIT"
+    IsUpdateable="false"/>
+  <ViewAttribute
+    Name="VolumeWeight"
+    PrecisionRule="true"
+    EntityAttrName="VolumeWeight"
+    EntityUsage="FmsdomGoods"
+    AliasName="VOLUME_WEIGHT"/>
+  <ViewAttribute
+    Name="VolumeWeightUnit"
+    PrecisionRule="true"
+    EntityAttrName="VolumeWeightUnit"
+    EntityUsage="FmsdomGoods"
+    AliasName="VOLUME_WEIGHT_UNIT"
+    LOVName="LOV_VolumeWeightUnit">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Loadmeter"
+    PrecisionRule="true"
+    EntityAttrName="Loadmeter"
+    EntityUsage="FmsdomGoods"
+    AliasName="LOADMETER"/>
+  <ViewAttribute
+    Name="LoadmeterUnit"
+    PrecisionRule="true"
+    EntityAttrName="LoadmeterUnit"
+    EntityUsage="FmsdomGoods"
+    AliasName="LOADMETER_UNIT"
+    LOVName="LOV_LoadmeterUnit">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="CollectionPiId"
+    PrecisionRule="true"
+    EntityAttrName="CollectionPiId"
+    EntityUsage="FmsdomGoods"
+    AliasName="COLLECTION_PI_ID"/>
+  <ViewAttribute
+    Name="InTree"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    AliasName="InTree"
+    EntityAttrName="InTree"
+    EntityUsage="FmsdomGoods"/>
+  <ViewAttribute
+    Name="Reference2"
+    PrecisionRule="true"
+    EntityAttrName="Reference2"
+    EntityUsage="FmsdomGoods"
+    AliasName="REFERENCE2"/>
+  <ViewAttribute
+    Name="Reference2Qualifier"
+    PrecisionRule="true"
+    EntityAttrName="Reference2Qualifier"
+    EntityUsage="FmsdomGoods"
+    AliasName="REFERENCE2_QUALIFIER"
+    LOVName="LOV_Reference2Qualifier">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Reference2Date"
+    PrecisionRule="true"
+    EntityAttrName="Reference2Date"
+    EntityUsage="FmsdomGoods"
+    AliasName="REFERENCE2_DATE"/>
+  <ViewAttribute
+    Name="Grade"
+    PrecisionRule="true"
+    EntityAttrName="Grade"
+    EntityUsage="FmsdomGoods"
+    AliasName="GRADE"
+    LOVName="LOV_Grade">
+    <TransientExpression
+      Name="ExpressionScript"
+      CodeSourceName="FmsdomGoodsViewRow"/>
+    <RecalcCondition
+      Name="RecalcExpressionScript"
+      CodeSourceName="FmsdomGoodsViewRow"/>
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+    <Dependencies>
+      <Item
+        Value="CommodityCode"/>
+    </Dependencies>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Origin"
+    PrecisionRule="true"
+    EntityAttrName="Origin"
+    EntityUsage="FmsdomGoods"
+    AliasName="ORIGIN"/>
+  <ViewAttribute
+    Name="Brand"
+    PrecisionRule="true"
+    EntityAttrName="Brand"
+    EntityUsage="FmsdomGoods"
+    AliasName="BRAND"
+    LOVName="LOV_Brand">
+    <TransientExpression
+      Name="ExpressionScript"
+      CodeSourceName="FmsdomGoodsViewRow"/>
+    <RecalcCondition
+      Name="RecalcExpressionScript"
+      CodeSourceName="FmsdomGoodsViewRow"/>
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+    <Dependencies>
+      <Item
+        Value="CommodityCode"/>
+    </Dependencies>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Screen"
+    PrecisionRule="true"
+    EntityAttrName="Screen"
+    EntityUsage="FmsdomGoods"
+    AliasName="SCREEN"
+    LOVName="LOV_Screen">
+    <TransientExpression
+      Name="ExpressionScript"
+      CodeSourceName="FmsdomGoodsViewRow"/>
+    <RecalcCondition
+      Name="RecalcExpressionScript"
+      CodeSourceName="FmsdomGoodsViewRow"/>
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+    <Dependencies>
+      <Item
+        Value="CommodityCode"/>
+    </Dependencies>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="CustomsStatus"
+    PrecisionRule="true"
+    EntityAttrName="CustomsStatus"
+    EntityUsage="FmsdomGoods"
+    AliasName="CUSTOMS_STATUS"
+    LOVName="LOV_CustomsStatus">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="CustomsBondNbr"
+    PrecisionRule="true"
+    EntityAttrName="CustomsBondNbr"
+    EntityUsage="FmsdomGoods"
+    AliasName="CUSTOMS_BOND_NBR"/>
+  <ViewAttribute
+    Name="StorageCondition"
+    PrecisionRule="true"
+    EntityAttrName="StorageCondition"
+    EntityUsage="FmsdomGoods"
+    AliasName="STORAGE_CONDITION"
+    LOVName="LOV_StorageCondition">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="DeliveryUnit"
+    PrecisionRule="true"
+    EntityAttrName="DeliveryUnit"
+    EntityUsage="FmsdomGoods"
+    AliasName="DELIVERY_UNIT"
+    LOVName="LOV_DeliveryUnit">
+    <TransientExpression
+      Name="ExpressionScript"
+      CodeSourceName="FmsdomGoodsViewRow"/>
+    <RecalcCondition
+      Name="RecalcExpressionScript"
+      CodeSourceName="FmsdomGoodsViewRow"/>
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+    <Dependencies>
+      <Item
+        Value="StorageCondition"/>
+    </Dependencies>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="TareWeight"
+    PrecisionRule="true"
+    EntityAttrName="TareWeight"
+    EntityUsage="FmsdomGoods"
+    AliasName="TARE_WEIGHT"/>
+  <ViewAttribute
+    Name="TareWeightUnit"
+    PrecisionRule="true"
+    EntityAttrName="TareWeightUnit"
+    EntityUsage="FmsdomGoods"
+    AliasName="TARE_WEIGHT_UNIT"/>
+  <ViewAttribute
+    Name="SampleWeightTaken"
+    PrecisionRule="true"
+    EntityAttrName="SampleWeightTaken"
+    EntityUsage="FmsdomGoods"
+    AliasName="SAMPLE_WEIGHT_TAKEN"/>
+  <ViewAttribute
+    Name="SampleWeightTakenUnit"
+    PrecisionRule="true"
+    EntityAttrName="SampleWeightTakenUnit"
+    EntityUsage="FmsdomGoods"
+    AliasName="SAMPLE_WEIGHT_TAKEN_UNIT"/>
+  <ViewAttribute
+    Name="PiNumber"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="255"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="PiNumber"
+    SQLType="VARCHAR"
+    Expression="select pi_number from WFM_PIS where WFM_PIS.ID = FmsdomGoods.Pi_Id"
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="be.intris.tris.fms.module.model.views.FmsdomGoodsView.PiNumber_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="PiCategory"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="255"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="PiCategory"
+    SQLType="VARCHAR"
+    Expression="select pi_category from WFM_PIS where WFM_PIS.ID = FmsdomGoods.Pi_Id"
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="be.intris.tris.fms.module.model.views.FmsdomGoodsView.PiCategory_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="StockStatus"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="255"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="StockStatus"
+    SQLType="VARCHAR"
+    IsQueriable="false"
+    LOVName="LOV_StockStatus"
+    Expression="select stock_status from FMS_WARRANTS where FMS_WARRANTS.PI_ID = FmsdomGoods.Pi_Id AND ROWNUM = 1">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="be.intris.tris.fms.module.model.views.FmsdomGoodsView.StockStatus_LABEL"/>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="LandedGrossWeight"
+    PrecisionRule="true"
+    EntityAttrName="LandedGrossWeight"
+    EntityUsage="FmsdomGoods"
+    AliasName="LANDED_GROSS_WEIGHT"/>
+  <ViewAttribute
+    Name="LandedNetWeight"
+    PrecisionRule="true"
+    EntityAttrName="LandedNetWeight"
+    EntityUsage="FmsdomGoods"
+    AliasName="LANDED_NET_WEIGHT"/>
+  <ViewAttribute
+    Name="CommodityState"
+    PrecisionRule="true"
+    EntityAttrName="CommodityState"
+    EntityUsage="FmsdomGoods"
+    AliasName="COMMODITY_STATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="WarehouseLocation"
+    PrecisionRule="true"
+    EntityAttrName="WarehouseLocation"
+    EntityUsage="FmsdomGoods"
+    AliasName="WAREHOUSE_LOCATION"/>
+  <ViewAttribute
+    Name="LotNbr"
+    PrecisionRule="true"
+    EntityAttrName="LotNbr"
+    EntityUsage="FmsdomGoods"
+    AliasName="LOT_NBR"/>
+  <ViewAttribute
+    Name="StatisticalValue"
+    PrecisionRule="true"
+    EntityAttrName="StatisticalValue"
+    EntityUsage="FmsdomGoods"
+    AliasName="STATISTICAL_VALUE"/>
+  <ViewAttribute
+    Name="StatisticalValueCurrency"
+    PrecisionRule="true"
+    EntityAttrName="StatisticalValueCurrency"
+    EntityUsage="FmsdomGoods"
+    AliasName="STATISTICAL_VALUE_CURRENCY"
+    LOVName="LOV_StatisticalValueCurrency">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="SampleWeightTakenBl"
+    PrecisionRule="true"
+    EntityAttrName="SampleWeightTakenBl"
+    EntityUsage="FmsdomGoods"
+    AliasName="SAMPLE_WEIGHT_TAKEN_BL"/>
+  <ViewAttribute
+    Name="SampleWeightTakenBlUnit"
+    PrecisionRule="true"
+    EntityAttrName="SampleWeightTakenBlUnit"
+    EntityUsage="FmsdomGoods"
+    AliasName="SAMPLE_WEIGHT_TAKEN_BL_UNIT"/>
+  <ViewAttribute
+    Name="LandedNetWeightUnit"
+    PrecisionRule="true"
+    EntityAttrName="LandedNetWeightUnit"
+    EntityUsage="FmsdomGoods"
+    AliasName="LANDED_NET_WEIGHT_UNIT"/>
+  <ViewAttribute
+    Name="CommodityCode"
+    PrecisionRule="true"
+    EntityAttrName="CommodityCode"
+    EntityUsage="FmsdomGoods"
+    AliasName="COMMODITY_CODE"
+    LOVName="LOV_CommodityCode">    
+    <Properties>
+      <SchemaBasedProperties>
+        <AUTOSUBMIT
+          Value="true"/>
+        <CONTROLTYPE
+          Value="combo_lov"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Certificate"
+    PrecisionRule="true"
+    EntityAttrName="Certificate"
+    EntityUsage="FmsdomGoods"
+    AliasName="CERTIFICATE"/>
+  <ViewAttribute
+    Name="CertificateType"
+    PrecisionRule="true"
+    EntityAttrName="CertificateType"
+    EntityUsage="FmsdomGoods"
+    AliasName="CERTIFICATE_TYPE"/>
+  <ViewAttribute
+    Name="LandedGrossWeightUnit"
+    PrecisionRule="true"
+    EntityAttrName="LandedGrossWeightUnit"
+    EntityUsage="FmsdomGoods"
+    AliasName="LANDED_GROSS_WEIGHT_UNIT"/>
+  <ViewAttribute
+    Name="ReweighGrossWeightUnit"
+    PrecisionRule="true"
+    EntityAttrName="ReweighGrossWeightUnit"
+    EntityUsage="FmsdomGoods"
+    AliasName="REWEIGH_GROSS_WEIGHT_UNIT"/>
+  <ViewAttribute
+    Name="TareWeightPerUnit"
+    IsUpdateable="false"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    AliasName="TAREWEIGHTPERUNIT"
+    SQLType="NUMERIC">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="be.intris.tris.fms.module.model.views.FmsdomGoodsView.TareWeightPerUnit_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="LandedDate"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.sql.Timestamp"
+    ColumnType="TIMESTAMP"
+    AliasName="LANDEDDATE"
+    SQLType="DATE"
+    Expression="select creation_time from WFM_PIS where WFM_PIS.ID = FmsdomGoods.Pi_Id"
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="be.intris.tris.fms.module.model.views.FmsdomGoodsView.LandedDate_LABEL"/>
+        <FMT_FORMAT
+          ResId="be.intris.tris.fms.module.model.views.FmsdomGoodsView.LandedDate_FMT_FORMAT"/>
+        <FMT_FORMATTER
+          ResId="be.intris.tris.fms.module.model.views.FmsdomGoodsView.LandedDate_FMT_FORMATTER"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="SourcePiId"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    AliasName="SourcePiId"
+    SQLType="NUMERIC"
+    Expression="select DOM_GOODS.PI_ID from DOM_GOODS where DOM_GOODS.ID = FmsdomGoods.SOURCE_ID"/>
+  <ViewAttribute
+    Name="InTreeLinkGoEq"
+    IsUpdateable="false"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.lang.Boolean"
+    ColumnType="NUMBER"
+    AliasName="InTreeLinkGoEq"
+    SQLType="BIT"/>
+  <ViewAttribute
+    Name="CommodityCodeDisplay"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="255"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="COMMODITYCODEDISPLAY"
+    SQLType="VARCHAR"
+    LOVName="LOV_CommodityCodeDisplay">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="be.intris.tris.fms.module.model.views.FmsdomGoodsView.CommodityCodeDisplay_LABEL"/>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+    <Dependencies>
+      <Item
+        Value="CommodityCode"
+        Type="notify"/>
+    </Dependencies>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="BrandDisplay"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="255"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="BrandDisplay"
+    SQLType="VARCHAR"
+    Expression='SELECT SHORT_NAME FROM GEN_CODE_TRANSLATIONS WHERE OWNING_ENTITY = &apos;GEN_WARRANT_BRANDS&apos; AND OWNING_CODE = concat(concat(:pCorporationCode_bvar, FmsdomGoods.COMMODITY_CODE), FmsdomGoods.BRAND) AND LANGUAGE_CODE = :pLanguageCode_bvar'
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="be.intris.tris.fms.module.model.views.FmsdomGoodsView.BrandDisplay_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+    <Dependencies>
+      <Item
+        Value="CommodityCodeReal"/>
+    </Dependencies>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="LanguageCode"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="255"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="LanguageCode"
+    SQLType="VARCHAR">
+    <TransientExpression
+      Name="ExpressionScript"
+      CodeSourceName="FmsdomGoodsViewRow"/>
+    <RecalcCondition
+      Name="RecalcExpressionScript"
+      CodeSourceName="FmsdomGoodsViewRow"/>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="CommodityCodeReal"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="255"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="CommodityCodeReal"
+    SQLType="VARCHAR">
+    <Dependencies>
+      <Item
+        Value="CommodityCode"
+        Type="notify"/>
+      <Item
+        Value="CommodityCodeDisplay"
+        Type="notify"/>
+    </Dependencies>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="LinkedToTransport"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.lang.Boolean"
+    ColumnType="NUMBER"
+    AliasName="LinkedToTransport"
+    SQLType="BIT"/>
+  <ViewAttribute
+    Name="LinkedToTransportTooltip"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="4000"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="LinkedToTransportTooltip"
+    SQLType="VARCHAR"/>
+  <ViewAttribute
+    Name="ProjectId"
+    PrecisionRule="true"
+    EntityAttrName="ProjectId"
+    EntityUsage="FmsdomGoods"
+    AliasName="PROJECT_ID"
+    LOVName="LOV_ProjectId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="ThirdpartyIdCustomer"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="255"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="VARCHAR2"
+    AliasName="THIRDPARTY_ID_CUSTOMER"
+    SQLType="NUMERIC"
+    Expression="select fmsdom_parties.thirdparty_id from fmsdom_parties where pi_id = FmsdomGoods.PI_ID and party_qualifier = 'CUST' and rownum = 1"
+    IsQueriable="false"/>
+  <ViewAttribute
+    Name="CommodityStateDisplay"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="255"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="CommodityStateDisplay"
+    SQLType="VARCHAR"
+    Expression="SELECT SHORT_NAME FROM GEN_CODE_TRANSLATIONS WHERE OWNING_ENTITY = 'GEN_WARRANT_COM_STATES' AND OWNING_CODE = FmsdomGoods.COMMODITY_STATE AND LANGUAGE_CODE = :pLanguageCode_bvar"
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="be.intris.tris.fms.module.model.views.FmsdomGoodsView.CommodityStateDisplay_LABEL"/>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="StockStatusDisplay"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="255"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="StockStatusDisplay"
+    SQLType="VARCHAR"/>
+  <ViewAttribute
+    Name="RentFromDate"
+    PrecisionRule="true"
+    EntityAttrName="RentFromDate"
+    EntityUsage="FmsdomGoods"
+    AliasName="RENT_FROM_DATE"/>
+  <ViewAttribute
+    Name="StockReference"
+    PrecisionRule="true"
+    EntityAttrName="StockReference"
+    EntityUsage="FmsdomGoods"
+    AliasName="STOCK_REFERENCE"/>
+  <ViewAttribute
+    Name="RentTillDate"
+    PrecisionRule="true"
+    EntityAttrName="RentTillDate"
+    EntityUsage="FmsdomGoods"
+    AliasName="RENT_TILL_DATE"/>
+  <ViewAttribute
+    Name="HsCodeSelection"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="255"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="HsCodeSelection"
+    SQLType="VARCHAR">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="be.intris.tris.fms.module.model.views.FmsdomGoodsView.HsCodeSelection_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="PickedBy"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    AliasName="PickedBy"
+    SQLType="NUMERIC"
+    Expression="select dg.id from dom_goods dg inner join wfm_pis pis on dg.pi_id = pis.id where dg.source_id = FmsdomGoods.Id and pis.pi_category = 'WMS' and rownum = 1"/>
+  <ViewAttribute
+    Name="CombiLot"
+    PrecisionRule="true"
+    EntityAttrName="CombiLot"
+    EntityUsage="FmsdomGoods"
+    AliasName="COMBI_LOT"/>
+  <ViewAttribute
+    Name="BlNumber"
+    PrecisionRule="true"
+    EntityAttrName="BlNumber"
+    EntityUsage="FmsdomGoods"
+    AliasName="BL_NUMBER"/>
+  <ViewAttribute
+    Name="BankOwnership"
+    PrecisionRule="true"
+    EntityAttrName="BankOwnership"
+    EntityUsage="FmsdomGoods"
+    AliasName="BANK_OWNERSHIP"/>
+  <ViewAttribute
+    Name="WarrantStatus"
+    PrecisionRule="true"
+    EntityAttrName="WarrantStatus"
+    EntityUsage="FmsdomGoods"
+    AliasName="WARRANT_STATUS"/>
+  <ViewAttribute
+    Name="ExpiryDate"
+    PrecisionRule="true"
+    EntityAttrName="ExpiryDate"
+    EntityUsage="FmsdomGoods"
+    AliasName="EXPIRY_DATE"/>
+  <ViewAttribute
+    Name="WarrantDate"
+    PrecisionRule="true"
+    EntityAttrName="WarrantDate"
+    EntityUsage="FmsdomGoods"
+    AliasName="WARRANT_DATE"/>
+  <ViewAttribute
+    Name="ReleaseReference"
+    PrecisionRule="true"
+    EntityAttrName="ReleaseReference"
+    EntityUsage="FmsdomGoods"
+    AliasName="RELEASE_REFERENCE"/>
+  <ViewAttribute
+    Name="TransferDate"
+    PrecisionRule="true"
+    EntityAttrName="TransferDate"
+    EntityUsage="FmsdomGoods"
+    AliasName="TRANSFER_DATE"/>
+  <ViewAttribute
+    Name="RentTransferDate"
+    PrecisionRule="true"
+    EntityAttrName="RentTransferDate"
+    EntityUsage="FmsdomGoods"
+    AliasName="RENT_TRANSFER_DATE"/>
+  <ViewAttribute
+    Name="CommodityCodeNameTranslated"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="255"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="COMMODITY_CODE_NT"
+    SQLType="VARCHAR"
+    Expression="SELECT NAME FROM GEN_CODE_TRANSLATIONS WHERE OWNING_ENTITY = 'GEN_COMMODITY_CODES' AND OWNING_CODE = FmsdomGoods.COMMODITY_CODE AND LANGUAGE_CODE = :pLanguageCode_bvar"/>
+  <ViewAttribute
+    Name="AverageTareWeight"
+    PrecisionRule="true"
+    EntityAttrName="AverageTareWeight"
+    EntityUsage="FmsdomGoods"
+    AliasName="AVERAGE_TARE_WEIGHT"/>
+  <ViewAttribute
+    Name="AverageTareWeightUnit"
+    PrecisionRule="true"
+    EntityAttrName="AverageTareWeightUnit"
+    EntityUsage="FmsdomGoods"
+    AliasName="AVERAGE_TARE_WEIGHT_UNIT"
+    LOVName="LOV_AverageTareWeightUnit">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="LoadWeight"
+    PrecisionRule="true"
+    EntityAttrName="LoadWeight"
+    EntityUsage="FmsdomGoods"
+    AliasName="LOAD_WEIGHT"/>
+  <ViewAttribute
+    Name="LoadWeightUnit"
+    PrecisionRule="true"
+    EntityAttrName="LoadWeightUnit"
+    EntityUsage="FmsdomGoods"
+    AliasName="LOAD_WEIGHT_UNIT"
+    LOVName="LOV_LoadWeightUnit">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="OriginalProjectId"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    AliasName="ORIGINAL_PROJECT_ID"
+    SQLType="NUMERIC"/>
+  <ViewAttribute
+    Name="HasDangerousGoods"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.lang.Integer"
+    ColumnType="INTEGER"
+    AliasName="HasDangerousGoods"
+    SQLType="INTEGER"
+    Expression="(select count(*) from fmsdom_dangerous_goods where fmsdom_dangerous_goods.good_id = FmsdomGoods.id)"/>
+    <ViewAttribute
+    Name="PackageCodeSelection"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="255"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="PackageCodeSelection"
+    SQLType="VARCHAR">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="be.intris.tris.fms.module.model.views.FmsdomGoodsView.PackageCodeSelection_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="CommodityCodeSelection"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="255"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="CommodityCodeSelection"
+    SQLType="VARCHAR">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="be.intris.tris.fms.module.model.views.FmsdomGoodsView.CommodityCodeSelection_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="BatchMode"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.lang.Boolean"
+    ColumnType="NUMBER"
+    AliasName="BatchMode"
+    SQLType="BIT"/>
+  <ViewAttribute
+    Name="CustomsDocumentType"
+    PrecisionRule="true"
+    EntityAttrName="CustomsDocumentType"
+    EntityUsage="FmsdomGoods"
+    AliasName="CUSTOMS_DOCUMENT_TYPE"/>
+  <ViewAttribute
+    Name="CustomsOfficeThirdpartyId"
+    PrecisionRule="true"
+    EntityAttrName="CustomsOfficeThirdpartyId"
+    EntityUsage="FmsdomGoods"
+    AliasName="CUSTOMS_OFFICE_THIRDPARTY_ID"/>
+  <ViewAttribute
+    Name="Mrn"
+    PrecisionRule="true"
+    EntityAttrName="Mrn"
+    EntityUsage="FmsdomGoods"
+    AliasName="MRN"/>
+  <ViewAttribute
+    Name="BookingReference"
+    PrecisionRule="true"
+    EntityAttrName="BookingReference"
+    EntityUsage="FmsdomGoods"
+    AliasName="BOOKING_REFERENCE"/>
+  <ViewAttribute
+    Name="LocationOwningEntity"
+    PrecisionRule="true"
+    EntityAttrName="LocationOwningEntity"
+    EntityUsage="FmsdomGoods"
+    AliasName="LOCATION_OWNING_ENTITY"/>
+  <ViewAttribute
+    Name="LocationOwningCode"
+    PrecisionRule="true"
+    EntityAttrName="LocationOwningCode"
+    EntityUsage="FmsdomGoods"
+    AliasName="LOCATION_OWNING_CODE"/>
+  <ViewAttribute
+    Name="TransportType"
+    PrecisionRule="true"
+    EntityAttrName="TransportType"
+    EntityUsage="FmsdomGoods"
+    AliasName="TRANSPORT_TYPE"/>
+  <ViewAttribute
+    Name="DisableUpdateItems"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.lang.Boolean"
+    ColumnType="NUMBER"
+    AliasName="DisableUpdateItems"
+    SQLType="BIT"/>
+  <ViewAttribute
+    Name="TechnicalReference"
+    PrecisionRule="true"
+    EntityAttrName="TechnicalReference"
+    EntityUsage="FmsdomGoods"
+    AliasName="TECHNICAL_REFERENCE"/>
+  <ViewAttribute
+    Name="CommGrossWeight"
+    PrecisionRule="true"
+    EntityAttrName="CommGrossWeight"
+    EntityUsage="FmsdomGoods"
+    AliasName="COMM_GROSS_WEIGHT"/>
+  <ViewAttribute
+    Name="CommGrossWeightUnit"
+    PrecisionRule="true"
+    EntityAttrName="CommGrossWeightUnit"
+    EntityUsage="FmsdomGoods"
+    AliasName="COMM_GROSS_WEIGHT_UNIT"
+    LOVName="LOV_CommGrossWeightUnit">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="CommNetWeight"
+    PrecisionRule="true"
+    EntityAttrName="CommNetWeight"
+    EntityUsage="FmsdomGoods"
+    AliasName="COMM_NET_WEIGHT"/>
+  <ViewAttribute
+    Name="CommNetWeightUnit"
+    PrecisionRule="true"
+    EntityAttrName="CommNetWeightUnit"
+    EntityUsage="FmsdomGoods"
+    AliasName="COMM_NET_WEIGHT_UNIT"
+    LOVName="LOV_CommNetWeightUnit">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="CommTareWeight"
+    PrecisionRule="true"
+    EntityAttrName="CommTareWeight"
+    EntityUsage="FmsdomGoods"
+    AliasName="COMM_TARE_WEIGHT"/>
+  <ViewAttribute
+    Name="CommTareWeightUnit"
+    PrecisionRule="true"
+    EntityAttrName="CommTareWeightUnit"
+    EntityUsage="FmsdomGoods"
+    AliasName="COMM_TARE_WEIGHT_UNIT"
+    LOVName="LOV_CommTareWeightUnit">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="HasDangerousGoodsRecords"
+    IsUpdateable="false"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.lang.Boolean"
+    ColumnType="NUMBER"
+    AliasName="HasDangerousGoodsRecords"
+    SQLType="BIT"/>
+  <ViewAttribute
+    Name="OriginSelection"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="255"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="OriginSelection"
+    SQLType="VARCHAR"/>
+  <ViewAttribute
+    Name="NoAutoGenTasks"
+    IsQueriable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    EntityAttrName="NoAutoGenTasks"
+    EntityUsage="FmsdomGoods"
+    AliasName="NO_AUTO_GEN_TASKS"/>
+  <ViewCriteria
+    Name="FilterPiId"
+    ViewObjectName="be.intris.tris.fms.module.model.views.FmsdomGoodsView"
+    Conjunction="AND"
+    Mode="3">
+    <Properties Name="_Props">
+      <CustomProperties>
+        <Property
+          Name="displayOperators"
+          Value="InAdvancedMode"/>
+        <Property
+          Name="autoExecute"
+          Value="false"/>
+        <Property
+          Name="allowConjunctionOverride"
+          Value="true"/>
+        <Property
+          Name="showInList"
+          Value="true"/>
+        <Property
+          Name="mode"
+          Value="Basic"/>
+      </CustomProperties>
+    </Properties>
+    <ViewCriteriaRow
+      Name="FmsdomGoodsViewCriteria_row_0"
+      UpperColumns="1">
+      <ViewCriteriaItem
+        Name="PiId"
+        ViewAttribute="PiId"
+        Operator="="
+        Conjunction="AND"
+        Value=":pPiId_bvar"
+        IsBindVarValue="true"
+        Required="Optional"/>
+    </ViewCriteriaRow>
+  </ViewCriteria>
+  <ViewCriteria
+    Name="FilterId"
+    ViewObjectName="be.intris.tris.fms.module.model.views.FmsdomGoodsView"
+    Conjunction="AND"
+    Mode="3">
+    <Properties Name="_Props">
+      <CustomProperties>
+        <Property
+          Name="displayOperators"
+          Value="InAdvancedMode"/>
+        <Property
+          Name="autoExecute"
+          Value="false"/>
+        <Property
+          Name="allowConjunctionOverride"
+          Value="true"/>
+        <Property
+          Name="showInList"
+          Value="true"/>
+        <Property
+          Name="mode"
+          Value="Basic"/>
+      </CustomProperties>
+    </Properties>
+    <ViewCriteriaRow
+      Name="FmsdomGoodsViewCriteria_row_0"
+      UpperColumns="1">
+      <ViewCriteriaItem
+        Name="Id"
+        ViewAttribute="Id"
+        Operator="="
+        Conjunction="AND"
+        Value=":pId_bvar"
+        IsBindVarValue="true"
+        Required="Optional"/>
+    </ViewCriteriaRow>
+  </ViewCriteria>
+  <ViewCriteria
+    Name="FilterCollectionPiId"
+    ViewObjectName="be.intris.tris.fms.module.model.views.FmsdomGoodsView"
+    Conjunction="AND"
+    Mode="3">
+    <Properties Name="_Props">
+      <CustomProperties>
+        <Property
+          Name="displayOperators"
+          Value="InAdvancedMode"/>
+        <Property
+          Name="autoExecute"
+          Value="false"/>
+        <Property
+          Name="allowConjunctionOverride"
+          Value="true"/>
+        <Property
+          Name="showInList"
+          Value="true"/>
+        <Property
+          Name="mode"
+          Value="Basic"/>
+      </CustomProperties>
+    </Properties>
+    <ViewCriteriaRow
+      Name="FmsdomGoodsViewCriteria_row_0"
+      UpperColumns="1">
+      <ViewCriteriaItem
+        Name="CollectionPiId"
+        ViewAttribute="CollectionPiId"
+        Operator="="
+        Conjunction="AND"
+        Value=":pCollectionPiId_bvar"
+        IsBindVarValue="true"
+        Required="Optional"/>
+    </ViewCriteriaRow>
+  </ViewCriteria>
+  <ViewLinkAccessor
+    Name="FmsdomGoodItemsView"
+    ViewLink="be.intris.tris.fms.module.model.viewlinks.FmsdomGoodItemsFmsdomGoodsVL"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="FmsdomGietRelationsAndRelatedViewUnlinkedGoEq1"
+    ViewLink="be.intris.tris.fms.module.model.viewlinks.FmsdomGietRelationsAndRelatedFmsdomGoodsUnlinkedGoEqVL"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="FmsdomGietRelationsAndRelatedView"
+    ViewLink="be.intris.tris.fms.module.model.viewlinks.FmsdomGietRelationsAndRelatedFmsdomGoodsVL"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="FmsdomGietRelationsAndGoGoItView"
+    ViewLink="be.intris.tris.fms.module.model.viewlinks.FmsdomGietRelationsAndGoGoItFmsdomGoodsVL"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="FmsdomDangerousGoodsView"
+    ViewLink="be.intris.tris.fms.module.model.viewlinks.FmsdomDangerousGoodsFmsdomGoodsVL"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="FmswfmOrdersView"
+    ViewLink="be.intris.tris.fms.module.model.viewlinks.FmsdomGoodsFmswfmOrdersVL"
+    Type="oracle.jbo.Row"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="SourceFmsdomGoodsView"
+    ViewLink="be.intris.tris.fms.module.model.viewlinks.FmsdomGoodWarrantsFmsdomGoodsVL"
+    Type="oracle.jbo.Row"
+    Reversed="true"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="DestinationFmsdomGoodsView"
+    ViewLink="be.intris.tris.fms.module.model.viewlinks.FmsdomGoodWarrantsFmsdomGoodsVL"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ClientInterface
+    Name="__clientInterface">
+    <Method
+      Name="hasLinkRowsToDisplay"
+      MethodName="hasLinkRowsToDisplay">
+      <Return
+        Name="_return_type_"
+        Type="boolean"/>
+    </Method>
+    <Method
+      Name="prepareFmsGoodsSelect"
+      MethodName="prepareFmsGoodsSelect">
+      <Return
+        Name="_return_type_"
+        Type="java.util.List"
+        IsGeneric="true">
+        <Element
+          Name="Number"
+          Type="oracle.jbo.domain.Number"/>
+      </Return>
+      <Parameter
+        Name="defaultSelection"
+        Type="java.util.List"/>
+    </Method>
+    <Method
+      Name="getRowsInTree"
+      MethodName="getRowsInTree">
+      <Return
+        Name="_return_type_"
+        Type="java.lang.Integer"/>
+    </Method>
+    <Method
+      Name="setGoodStockReference"
+      MethodName="setGoodStockReference">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="goodId"
+        Type="oracle.jbo.domain.Number"/>
+      <Parameter
+        Name="stockReference"
+        Type="java.lang.String"/>
+    </Method>
+    <Method
+      Name="emtpyGoodItemsStockReference"
+      MethodName="emtpyGoodItemsStockReference">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="goodId"
+        Type="oracle.jbo.domain.Number"/>
+    </Method>
+    <Method
+      Name="changeSelectionOfAllGoods"
+      MethodName="changeSelectionOfAllGoods">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="selectionState"
+        Type="java.lang.Boolean"/>
+    </Method>
+    <Method
+      Name="refreshCurrentRowFromDb"
+      MethodName="refreshCurrentRowFromDb">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+    </Method>
+    <Method
+      Name="sortBasedOn"
+      MethodName="sortBasedOn">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="mode"
+        Type="java.lang.String"/>
+    </Method>
+  </ClientInterface>
+  <ClientRowInterface
+    Name="__rowClientInterface">
+    <Method
+      Name="calculateGoodAmountsFromGoodItems"
+      MethodName="calculateGoodAmountsFromGoodItems">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+    </Method>
+    <Method
+      Name="calculateGoodAmountsFromGoodItems"
+      MethodName="calculateGoodAmountsFromGoodItems">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+    </Method>
+    <Method
+      Name="copyWeightsToCommWeights"
+      MethodName="copyWeightsToCommWeights">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+    </Method>
+    <Method
+      Name="setOriginExposed"
+      MethodName="setOriginExposed">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="code"
+        Type="java.lang.String"/>
+      <Parameter
+        Name="displayValue"
+        Type="java.lang.String"/>
+    </Method>
+  </ClientRowInterface>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="be.intris.tris.fms.module.model.FmsModuleModelBundle"/>
+  </ResourceBundle>
+  <RowFinders>
+    <AttrValueRowFinder
+      Name="FindRowById">
+      <ViewCriteriaUsage
+        Name="FilterId"
+        FullName="be.intris.tris.fms.module.model.views.FmsdomGoodsView.FilterId"/>
+      <VarAttributeMap
+        Name="FindRowByIdMap">
+        <VariableAttributeMapping
+          Variable="pId_bvar"
+          Attribute="Id"
+          Name="pId_bvar"/>
+      </VarAttributeMap>
+    </AttrValueRowFinder>
+    <ExpressionRowFinder
+      Name="RowFinderFilterCollectionPiId">
+      <ViewCriteriaUsage
+        Name="FilterCollectionPiId"
+        FullName="be.intris.tris.fms.module.model.views.FmsdomGoodsView.FilterCollectionPiId"/>
+      <VarExpressionMap
+        Name="RowFinderFilterCollectionPiIdMap">
+        <VariableExpressionMapping
+          Name="pCollectionPiId_bvar"
+          Variable="pCollectionPiId_bvar"/>
+      </VarExpressionMap>
+    </ExpressionRowFinder>
+    <ExpressionRowFinder
+      Name="RowFinderFilterPiId">
+      <ViewCriteriaUsage
+        Name="FilterPiId"
+        FullName="be.intris.tris.fms.module.model.views.FmsdomGoodsView.FilterPiId"/>
+      <VarExpressionMap
+        Name="RowFinderFilterPiIdMap">
+        <VariableExpressionMapping
+          Name="pPiId_bvar"
+          Variable="pPiId_bvar"/>
+      </VarExpressionMap>
+    </ExpressionRowFinder>
+  </RowFinders>
+  <SortCriteria>
+    <Sort
+      Attribute="Id"/>
+  </SortCriteria>
+</ViewObject>
